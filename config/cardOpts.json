@@ -6,6 +6,11 @@
 					"owner": "ProjectIgnis",
 					"repo": "BabelCDB",
 					"path": ""
+				},
+				{
+					"owner": "0x4261756D",
+					"repo": "CCS_scripts",
+					"path": ""
 				}
 			]
 		},
@@ -15,15 +20,6 @@
 					"owner": "Jambalaya751955",
 					"repo": "ygopro-database-JP",
 					"path": "cdb/Live2017Links"
-				}
-			]
-		},
-		"cn": {
-			"remoteDBs": [
-				{
-					"owner": "moecube",
-					"repo": "ygopro-database",
-					"path": "locales/zh-CN"
 				}
 			]
 		},

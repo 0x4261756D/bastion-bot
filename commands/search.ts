@@ -40,7 +40,7 @@ async function func(msg: Message, mobile: boolean): Promise<Message> {
 	}
 	const isDM = msg.channel instanceof PrivateChannel; // allow anime in DMs because no way to turn it on
 	const allowAnime = isDM || config.getConfig("allowAnime").getValue(msg);
-	const allowCustom = isDM || config.getConfig("allowAnime").getValue(msg);
+	const allowCustom = isDM || config.getConfig("allowCustom").getValue(msg);
 	if (cards.length > 0) {
 		if (!allowAnime) {
 			cards = cards.filter(

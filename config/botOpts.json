@@ -36,6 +36,56 @@
 			"owner": "ProjectIgnis",
 			"repo": "CardScripts",
 			"path": "unofficial"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/Bilighteral"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/Eisbarriere"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/Frogs"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/INSU_Christmas_script"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/INSU_Extradeck_script"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/INSU_Maindeck_script"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/Ojama"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/Venom"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/Ventus"
+		},
+		{
+			"owner": "0x4261756D",
+			"repo": "CCS_scripts",
+			"path": "script/creativ"
 		}
 	],
 	"links": {

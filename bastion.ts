@@ -3,7 +3,7 @@ import { bot, logDeleteMessage } from "./modules/bot";
 import { cardSearch } from "./modules/cardSearch";
 import { Command } from "./modules/Command";
 import { config } from "./modules/configs";
-import { answerTrivia } from "./modules/trivia";
+//import { answerTrivia } from "./modules/trivia";
 import { cmds as commands } from "./commands/index";
 import { status } from "./config/botOpts.json";
 
@@ -61,10 +61,10 @@ bot.on("messageCreate", async (msg: Message) => {
 		return;
 	}
 	if (msg.channel.id in gameData) {
-		switch (gameData[msg.channel.id].game) {
+		/*switch (gameData[msg.channel.id].game) {
 			case "trivia":
 				await answerTrivia(msg).catch(e => msg.channel.createMessage("Error!\n" + e));
-		}
+		}*/
 		return;
 	}
 	if (msg.mentions.find(u => u.id === bot.user.id) !== undefined) {

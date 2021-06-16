@@ -27,9 +27,9 @@ import { command as stats } from "./stats";
 import { command as strings } from "./strings";
 import { command as strfind } from "./strfind";
 import { command as spage } from "./sPage";
-import { command as tlock } from "./tlock";
+//import { command as tlock } from "./tlock";
 import { command as top } from "./top";
-import { command as trivia } from "./trivia";
+//import { command as trivia } from "./trivia";
 import { command as update } from "./update";
 import { command as yugi } from "./yugi";
 import { Command } from "../modules/Command";
@@ -64,9 +64,9 @@ export const cmds: Command[] = [
 	strings,
 	strfind,
 	spage,
-	tlock,
+	//tlock,
 	top,
-	trivia,
+	//trivia,
 	update,
 	yugi
 ];

@@ -1,4 +1,4 @@
-import { Message } from "eris";
+/*import { Message } from "eris";
 import { Command } from "../modules/Command";
 import { trivia, getLock } from "../modules/trivia";
 
@@ -16,3 +16,4 @@ const desc =
 	"For details on the filter system, see https://github.com/AlphaKretin/ygo-data/wiki/Filter-system.";
 
 export const command = new Command(names, func, cond, desc, "rounds lang hard|filter");
+*/

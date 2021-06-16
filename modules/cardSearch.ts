@@ -372,7 +372,7 @@ export async function cardSearch(msg: Message): Promise<void | Message> {
 	}
 	const isDM = msg.channel instanceof PrivateChannel; // allow anime in DMs because no way to turn it on
 	const allowAnime = isDM || (config.getConfig("allowAnime").getValue(msg) as boolean);
-	const allowCustom = isDM || (config.getConfig("allowAnime").getValue(msg) as boolean);
+	const allowCustom = isDM || (config.getConfig("allowCustom").getValue(msg) as boolean);
 	const usedResults: string[] = [];
 	for (const result of results) {
 		const query = getLang(msg, result.res);

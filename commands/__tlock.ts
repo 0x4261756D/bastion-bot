@@ -1,6 +1,6 @@
-import { Message } from "eris";
+/*import { Message } from "eris";
 import { Command } from "../modules/Command";
-import { setLock } from "../modules/trivia";
+//import { setLock } from "../modules/trivia";
 
 const names = ["tlock"];
 const func = async (msg: Message): Promise<Message> => {
@@ -11,3 +11,4 @@ const func = async (msg: Message): Promise<Message> => {
 const desc = "Toggles whether or not the Trivia game can be played in the channel this command was used in.";
 
 export const command = new Command(names, func, undefined, desc, undefined, true);
+*/

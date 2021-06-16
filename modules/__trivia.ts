@@ -329,7 +329,7 @@ export async function trivia(msg: Message): Promise<void> {
 	}
 }
 
-const filePath = "confs/tlocks.json";
+const filePath = "config/tlocks.json";
 const triviaLocks: string[] = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
 export async function setLock(c: Channel | Message): Promise<boolean> {

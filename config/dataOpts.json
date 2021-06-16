@@ -24,6 +24,11 @@
 		},
 		"ko": {
 			"remote": "https://raw.githubusercontent.com/JSY1728/EDOPRO-Korean-CDB-TEST/master/strings.conf"
+		},
+		"cst":
+		{
+			"local": "strings.conf",
+			"remote": "https://raw.githubusercontent.com/0x4261756D/CCS_scripts/master/strings.conf"
 		}
 	},
 	"shortcuts": {
