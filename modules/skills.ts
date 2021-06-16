@@ -64,7 +64,7 @@ class Skills {
 		}
 		const result = results[0];
 		if ("name" in result) {
-			return result;
+			return result.item;
 		}
 		return result.item;
 	}
