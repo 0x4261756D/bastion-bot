@@ -19,10 +19,10 @@ export const libraryPages: { [channelID: string]: LibraryPage } = {};
 
 class Library {
 	private lib?: Promise<LibraryData[]>;
-	private source: string;
+	private sources: string[];
 
-	constructor(spreadsheetId: string) {
-		this.source = spreadsheetId;
+	constructor(spreadsheetIds: string[]) {
+		this.sources = spreadsheetIds;
 		this.update();
 	}
 
@@ -61,12 +61,16 @@ class Library {
 	}
 
 	private async load(): Promise<LibraryData[]> {
-		const data = await this.extract(this.source);
-		const sheet = Object.values(data).filter((s, i) => i > 0 && s.length > 0); // skip header row
-		if (sheet.length === 0) {
-			throw new Error("Sheet does not conform to Functions, Constants or Params!");
+		let out: LibraryData[] = [];
+		for(const source of this.sources)
+		{
+			const data = await this.extract(source);
+			const sheet = Object.values(data).filter((s, i) => i > 0 && s.length > 0); // skip header row
+			if (sheet.length === 0) {
+				throw new Error("Sheet does not conform to Functions, Constants or Params!");
+			}
+			out = out.concat(sheet.map(row => ({ variant: row[0], name: row[1], desc: row[2] })));
 		}
-		const out: LibraryData[] = sheet.map(row => ({ variant: row[0], name: row[1], desc: row[2] }));
 		return out;
 	}
 }

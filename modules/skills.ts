@@ -1,5 +1,5 @@
 import Fuse from "fuse.js";
-import { skills as skillSheet } from "../config/sheetOpts.json";
+import { skills as skillSheets } from "../config/sheetOpts.json";
 import { CSVResult } from "./libraryPages";
 import fetch from "node-fetch";
 import parse from "csv-parse";
@@ -44,12 +44,16 @@ class Skills {
 	}
 
 	private async getFuse(): Promise<Fuse<Skill>> {
-		const data = await this.extract(skillSheet);
-		const sheet = Object.values(data).filter(s => s.length > 0);
-		if (!sheet) {
-			throw new Error("Could not load skill sheet!");
+		let input: Skill[] = [];
+		for(const skillSheet of skillSheets)
+		{
+			const data = await this.extract(skillSheet);
+			const sheet = Object.values(data).filter(s => s.length > 0);
+			if (!sheet) {
+				throw new Error("Could not load skill sheet!");
+			}
+			input = input.concat(sheet.map(row => ({ name: row[0], desc: row[1], chars: row[2] })));
 		}
-		const input: Skill[] = sheet.map(row => ({ name: row[0], desc: row[1], chars: row[2] }));
 		return new Fuse(input, this.fuseOpts);
 	}
 
